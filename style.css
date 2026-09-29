@@ -1,0 +1,179 @@
+body {
+    background-color: #fcf9f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+/* titulo dos destaques*/
+.destaque {
+    text-align: center;
+    box-shadow: 0 4px 8px #c79217;
+}
+/*Os livros um do ladinho do outro*/
+.vitrine-livros {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+/*conf do livro*/
+.livro {
+    text-align: center;
+    width: 150px;
+}
+/*textinho em baixo do livro*/
+.livro img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #c79217;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.livro img:hover {
+    transform: translate(-8px);
+    box-shadow: 0 12px 20px #c79217;
+}
+/*estilizando o botãozinho*/
+.bnt-cadastro {
+    background-color: #4a2810;
+    color: #fcf9f2;
+    border: 2px solid #4a2810;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 25px;
+
+    /* EFEITO DE CINEMA: Diz que qualquer mudança visual vai levar 0.3 segundos para acontecer de forma suave */
+    transition: all 0.3s ease; 
+    
+    /* Uma sombra bem leve e sofisticada atrás dele */
+    box-shadow: 0 4px 6px rgba(74, 40, 16, 0.15); 
+
+}
+
+.bnt-cadastro:hover {
+    background-color: transparent;
+    color: #4a2810;
+    transform: scale(1.o5);  /* O botão dá uma leve "crescidinha" super profissional! */
+    box-shadow: 0 6px 12px rgba(74, 40, 16, 0.25);
+}
+
+/* =========================================================
+   AQUI COMEÇA O ESTILO DA TELA DE CADASTRO (cadastro.html)
+   ========================================================= */
+.container-cadastro {
+    max-width: 450px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #4a2810;
+    margin-bottom: 6px;
+}
+
+.campo-grupo input[type="text"],
+.campo-grupo input[type="email"],
+.campo-grupo input[type="password"],
+.campo-grupo input[type="number"] {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    border: 1px solid #d1c7bd; /* Uma bordinha suave para não brigar com o visual */
+    border-radius: 8px;
+    background-color: #fdfcfb; 
+    color: #333;
+    transition: all 0.3s ease; 
+}
+
+/* Efeito lindo quando o leitor clica na caixa para digitar (:focus) */
+.campo-grupo input:focus {
+    outline: none;
+    border-color: #4a2810; 
+    box-shadow: 0 0 5px rgba(74, 40, 16, 0.2);
+}
+
+.campo-foto input[type="file"] {
+     background: #f1eae2;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #4a2810; /* Borda pontilhada charmosa */
+    cursor: pointer;
+}
+
+.btn-finalizar {
+    background-color: #4a2810; /* Marrom forte marcante */
+    color: #fcf9f2;            /* Texto claro */
+    border: none;
+    width: 100%;               /* Faz o botão ocupar toda a largura do formulário */
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;       /* Totalmente arredondado e moderno */
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 40, 16, 0.2);
+}
+
+/* 🚀 Efeito ao passar o mouse no botão de finalizar */
+.btn-finalizar:hover {
+    background-color: #321a0a; /* Fica um marrom um pouquinho mais escuro */
+    transform: translateY(-2px); /* Dá um mini pulinho para cima */
+    box-shadow: 0 6px 15px rgba(74, 40, 16, 0.3); /* Aumenta a sombra */
+}
+
+/* 📸 Estilo para a foto que vai aparecer na tela */
+#preview-da-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;        /* Corta a imagem certinho para não amassar */
+    border-radius: 50%;       /* Deixa a foto totalmente redonda! 🔄 */
+    border: 3px solid #4a2810;/* Uma borda marrom café chiquérrima */
+    margin: 15px auto 0 auto; /* Centraliza a foto embaixo do botão de escolher arquivo */
+    box-shadow: 0 4px 8px rgba(74, 40, 16, 0.15);
+}
+
+/* Estilo do Card de Perfil Salvo */
+#card-perfil-salvo {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #4a2810; /* Borda pontilhada elegante */
+    border-radius: 12px;
+    background-color: #fdfcfb;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(74, 40, 16, 0.1);
+    animation: surgirSuave 0.5s ease; /* Efeito de surgir suave na tela */
+}
+
+#card-perfil-salvo h3 {
+    color: #4a2810;
+    margin-bottom: 15px;
+}
+
+#foto-salva {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #27ae60; /* Borda verde de sucesso! */
+    margin-bottom: 15px;
+}
+
+/* Animação para o card aparecer bonitinho */
+@keyframes surgirSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
